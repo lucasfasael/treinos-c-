@@ -22,7 +22,7 @@ aluno estudantes[5];
 	cout << "~ ~ ~.--------------------------------------------------------------------.~ ~ ~" << endl;
 	cout << "--------------------------------- PROGRAM INIT ---------------------------------" << endl;	
 	
-	for(int x = 0; x<5; x++){
+	for(int x = 0; x<4; x++){
 		cout << "Qual o nome do " << x+1 << "° aluno ? : ";
 		cin >> estudantes[x].nome;
 		cout << "Qual o curso do " << x+1 << "° aluno ? : ";
@@ -35,12 +35,12 @@ aluno estudantes[5];
 		cin >> estudantes[x].av2;
 		cout << endl;
 	}
-	for(int y = 0; y<5; y++){
-		if(estudantes[y].av1 >= 4 & estudantes[y].av2 >= 4){
-			cout << y+1 << " - O aluno " << estudantes[y].nome << " atende aos requisitos." << endl;
+	for(int y = 0; y<4; y++){
+		if((estudantes[y].av1 + estudantes[y].av2 ) / 2 >= 6){
+			cout << y+1 << " - O aluno " << estudantes[y].nome << " tem média para ser aprovado." << endl;
 		}
 		else{
-			cout << y+1 << " -  O aluno " << estudantes[y].nome << " não atende aos requisitos." << endl;
+			cout << y+1 << " -  O aluno " << estudantes[y].nome << " NÃO tem média para ser aprovado." << endl;
 		}
 }
 }
